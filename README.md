@@ -1,6 +1,8 @@
 # Mdisk Search Bot
 
-<p align="center"><img src="https://telegra.ph/file/fe54eb9ef89ed14afd2bc.jpg" width="2000"></a></p>
+<p align="center"><img src="https://te.legra.ph/file/4f6d327d17b64c4c2a20b.jpg" width="2000"></a></p>
+
+i just added some features acording me in below repo
 
 [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/KGN-BOTS/Mdisk-search-bot)   
 
