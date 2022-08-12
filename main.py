@@ -31,7 +31,7 @@ async def start_handler(_, event: Message):
         photo="https://te.legra.ph/file/965fdc73a8bee02b968a3.jpg",
         caption=Config.START_MSG.format(event.from_user.mention),
         reply_markup=InlineKeyboardMarkup([
-	    [InlineKeyboardButton("➕ Add Me In Your Groups ➕", url=f'http://t.me/@DTG_SIMPLE_BOT?startgroup=true')],
+	    [InlineKeyboardButton("➕ Add Me In Your Groups ➕", url="http://t.me/@DTG_SIMPLE_BOT?startgroup=true")],
             [InlineKeyboardButton("Our Channel", url="https://t.me/DTG_TV"),
              InlineKeyboardButton("Our Movie Group", url="https://t.me/Movie_Search_bot_hindi")],
 	    [InlineKeyboardButton("Support Group", url="https://t.me/DTG_SUPPORT")],
@@ -47,7 +47,7 @@ async def help_handler(_, event: Message):
         photo="https://te.legra.ph/file/965fdc73a8bee02b968a3.jpg",
         caption=Config.ABOUT_HELP_TEXT.format(event.from_user.mention),
         reply_markup=InlineKeyboardMarkup([
-	    [InlineKeyboardButton("➕ Add Me In Your Groups ➕", url=f'http://t.me/@DTG_SIMPLE_BOT?startgroup=true')],
+	    [InlineKeyboardButton("➕ Add Me In Your Groups ➕", url="http://t.me/@DTG_SIMPLE_BOT?startgroup=true")],
             [InlineKeyboardButton("Our Channel", url="https://t.me/DTG_TV"),
              InlineKeyboardButton("Our Movie Group", url="https://t.me/Movie_Search_bot_hindi")],
 	    [InlineKeyboardButton("Support Group", url="https://t.me/DTG_SUPPORT")],	
@@ -59,7 +59,7 @@ async def help_handler(_, event: Message):
 async def inline_handlers(_, event: Message):
     if event.text == '/start':
         return
-    answers = f'**🗃️ 𝐑𝐞𝐬𝐮𝐥𝐭𝐬 𝐅𝐨𝐫 ┬┴┬┴┤ {event.text} ├┬┴┬┴ \n\n───▄▀▀▀▄▄▄▄▄▄▄▀▀▀▄───\n───█▒▒░░░░░░░░░▒▒█───\n────█░░█░░░░░█░░█────\n─▄▄──█░░░▀█▀░░░█──▄▄─\n█░░█─▀▄░░░░░░░▄▀─█░░█\n°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°\n     🄲🄷🄴🄲🄺 🅂🄿🄴🄻🄻🄸🄽🄶\n➠▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰\n\n**'
+    answers = f'**     🗃️ 𝐑𝐞𝐬𝐮𝐥𝐭𝐬 𝐅𝐨𝐫\n      ┬┴┬┴┤ {event.text} ├┬┴┬┴ \n\n   ▄▀▀▀▄▄▄▄▄▄▄▀▀▀▄   \n   █▒▒░░░░░░░░░▒▒█   \n    █░░█░░░░░█░░█    \n ▄▄  █░░░▀█▀░░░█  ▄▄ \n█░░█ ▀▄░░░░░░░▄▀ █░░█\n°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°\n     🄲🄷🄴🄲🄺 🅂🄿🄴🄻🄻🄸🄽🄶\n➠▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰\n\n**'
     async for message in User.search_messages(chat_id=Config.CHANNEL_ID, limit=50, query=event.text):
         if message.text:
             thumb = None
@@ -124,19 +124,15 @@ async def button(bot, cmd: CallbackQuery):
             await cmd.message.edit(
 			text=Config.START_MSG.format(cmd.from_user.mention),
 			disable_web_page_preview=True,
-			reply_markup=InlineKeyboardMarkup(
-				[
-                                        [
-						InlineKeyboardButton("Help", callback_data="Help_msg"),
-						InlineKeyboardButton("About", callback_data="About_msg")
-					],
-					[
-						InlineKeyboardButton("Support", url="https://t.me/DTG_SUPPORT"),
-						InlineKeyboardButton("Channel", url="https://t.me/DTG_TV")
-					]
-				]
-			),
-			parse_mode="html"
+			reply_markup=InlineKeyboardMarkup([
+	                            [InlineKeyboardButton("➕ Add Me In Your Groups ➕", url="http://t.me/@DTG_SIMPLE_BOT?startgroup=true")],
+                                    [InlineKeyboardButton("Our Channel", url="https://t.me/DTG_TV"),
+                                     InlineKeyboardButton("Our Movie Group", url="https://t.me/Movie_Search_bot_hindi")],
+	                            [InlineKeyboardButton("Support Group", url="https://t.me/DTG_SUPPORT")],
+                                    [InlineKeyboardButton("Help", callback_data="Help_msg"),
+                                     InlineKeyboardButton("About", callback_data="About_msg")]
+                       ])
+                       parse_mode="html"
 		)
 
 # Start Clients
