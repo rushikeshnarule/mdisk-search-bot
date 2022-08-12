@@ -6,7 +6,6 @@ from pyrogram.errors import QueryIdInvalid
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery, InlineQuery, InlineQueryResultArticle, \
     InputTextMessageContent
 from TeamTeleRoid.forcesub import ForceSub
-from utils import temp
 
 
 # Bot Client for Inline Search
