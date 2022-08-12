@@ -26,10 +26,12 @@ User = Client(
 @Bot.on_message(filters.private & filters.command("start"))
 async def start_handler(_, event: Message):
 
-    await event.reply_text(Config.START_MSG.format(event.from_user.mention),
+    await event.reply_photo(
+        photo="https://te.legra.ph/file/965fdc73a8bee02b968a3.jpg",
+        caption=Config.START_MSG.format(event.from_user.mention),
         reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton("Our Channel", url="https://t.me/KGN_MOVIES"),
-             InlineKeyboardButton("Our Group", url="https://t.me/+p8kNoU64P1kxNDZl")],
+            [InlineKeyboardButton("Our Channel", url="https://t.me/DTG_TV"),
+             InlineKeyboardButton("Our Group", url="https://t.me/Movie_Search_bot_hindi")],
             [InlineKeyboardButton("Help", callback_data="Help_msg"),
              InlineKeyboardButton("About", callback_data="About_msg")]
         ])
@@ -40,8 +42,8 @@ async def help_handler(_, event: Message):
 
     await event.reply_text(Config.ABOUT_HELP_TEXT.format(event.from_user.mention),
         reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton("Our Channel", url="https://t.me/KGN_MOVIES"),
-             InlineKeyboardButton("Our Group", url="https://t.me/+p8kNoU64P1kxNDZl"), 
+            [InlineKeyboardButton("Our Channel", url="https://t.me/DTG_TV"),
+             InlineKeyboardButton("Our Group", url="https://t.me/Movie_Search_bot_hindi"), 
              InlineKeyboardButton("About", callback_data="About_msg")]
         ])
     )
