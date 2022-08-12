@@ -131,7 +131,8 @@ async def button(bot, cmd: CallbackQuery):
 	                            [InlineKeyboardButton("Support Group", url="https://t.me/DTG_SUPPORT")],
                                     [InlineKeyboardButton("Help", callback_data="Help_msg"),
                                      InlineKeyboardButton("About", callback_data="About_msg")]
-                       ])
+                                    ]  
+		       ),
                        parse_mode="html"
 		)
 
