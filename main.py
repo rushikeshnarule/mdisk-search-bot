@@ -87,11 +87,11 @@ async def button(bot, cmd: CallbackQuery):
 			reply_markup=InlineKeyboardMarkup(
 				[
 					[
-						InlineKeyboardButton("Our Channel", url="https://t.me/KGN_MOVIES"),
-						InlineKeyboardButton("Our Group", url="https://t.me/+p8kNoU64P1kxNDZl")
+						InlineKeyboardButton("Our Channel", url="https://t.me/DTG_TV"),
+						InlineKeyboardButton("Support Group", url="https://t.me/DTG_SUPPORT")
 					],
 					[
-						InlineKeyboardButton("Developer", url="https://t.me/KGN_OFFICIAL"),
+						InlineKeyboardButton("Developer", url="https://t.me/DTG_"),
 						InlineKeyboardButton("Home", callback_data="gohome")
 					]
 				]
@@ -106,10 +106,10 @@ async def button(bot, cmd: CallbackQuery):
 				[
 					[
 						InlineKeyboardButton("About", callback_data="About_msg"),
-						InlineKeyboardButton("Our Channel", url="https://t.me/KGN_OFFICIAL")
+						InlineKeyboardButton("Our Channel", url="https://t.me/DTG_TV")
 					], 
                                         [
-						InlineKeyboardButton("Owner", url="https://t.me/KGN_OFFICIAL"),
+						InlineKeyboardButton("Owner", url="https://t.me/DTG_Admin_bot"),
 						InlineKeyboardButton("Home", callback_data="gohome")
 					]
 				]
@@ -127,8 +127,8 @@ async def button(bot, cmd: CallbackQuery):
 						InlineKeyboardButton("About", callback_data="About_msg")
 					],
 					[
-						InlineKeyboardButton("Support", url="https://t.me/KGN_BOTS_SUPPORT"),
-						InlineKeyboardButton("Channel", url="https://t.me/KGN_MOVIES")
+						InlineKeyboardButton("Support", url="https://t.me/DTG_SUPPORT"),
+						InlineKeyboardButton("Channel", url="https://t.me/DTG_TV")
 					]
 				]
 			),
