@@ -31,7 +31,8 @@ async def start_handler(_, event: Message):
         caption=Config.START_MSG.format(event.from_user.mention),
         reply_markup=InlineKeyboardMarkup([
             [InlineKeyboardButton("Our Channel", url="https://t.me/DTG_TV"),
-             InlineKeyboardButton("Our Group", url="https://t.me/Movie_Search_bot_hindi")],
+             InlineKeyboardButton("Our Movie Group", url="https://t.me/Movie_Search_bot_hindi")],
+	    [inlineKeyboardButton("Support Group", url="https://t.me/DTG_SUPPORT"],
             [InlineKeyboardButton("Help", callback_data="Help_msg"),
              InlineKeyboardButton("About", callback_data="About_msg")]
         ])
@@ -40,10 +41,13 @@ async def start_handler(_, event: Message):
 @Bot.on_message(filters.private & filters.command("help"))
 async def help_handler(_, event: Message):
 
-    await event.reply_text(Config.ABOUT_HELP_TEXT.format(event.from_user.mention),
+    await event.reply_photo(
+        photo="https://te.legra.ph/file/965fdc73a8bee02b968a3.jpg",
+        caption=Config.ABOUT_HELP_TEXT.format(event.from_user.mention),
         reply_markup=InlineKeyboardMarkup([
             [InlineKeyboardButton("Our Channel", url="https://t.me/DTG_TV"),
-             InlineKeyboardButton("Our Group", url="https://t.me/Movie_Search_bot_hindi"), 
+             InlineKeyboardButton("Our Movie Group", url="https://t.me/Movie_Search_bot_hindi")],
+	    [inlineKeyboardButton("Support Group", url="https://t.me/DTG_SUPPORT"],	
              InlineKeyboardButton("About", callback_data="About_msg")]
         ])
     )
@@ -52,7 +56,7 @@ async def help_handler(_, event: Message):
 async def inline_handlers(_, event: Message):
     if event.text == '/start':
         return
-    answers = f'**📂 Results For ➠ {event.text} \n\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n➠ Please Type Correct Spelling.✍️\n➠ Add Year For Better Result.🗓️\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n\n**'
+    answers = f'**🗃️ Results For ➠ {event.text} \n\n▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n➠ Please Type Correct Spelling.✒️\n➠▰▱▰▱▰▱▰▱▰▱▰▱▰▱\n\n**'
     async for message in User.search_messages(chat_id=Config.CHANNEL_ID, limit=50, query=event.text):
         if message.text:
             thumb = None
@@ -61,7 +65,7 @@ async def inline_handlers(_, event: Message):
             if "|||" in message.text:
                 f_text = message.text.split("|||", 1)[0]
                 msg_text = message.text.html.split("|||", 1)[0]
-            answers += f'**🍿 Title ➠ ' + '' + f_text.split("\n", 1)[0] + '' + '\n\n📜 About ➠ ' + '' + f_text.split("\n", 2)[-1] + ' \n\n**'
+            answers += f'**🎬 Title ➠ ' + '' + f_text.split("\n", 1)[0] + '' + '\n\n📜 About ➠ ' + '' + f_text.split("\n", 2)[-1] + ' \n\n**'
     try:
         await event.reply_text(
             answers
