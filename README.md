@@ -1,6 +1,6 @@
 # Mdisk Search Bot
 
-<p align="center"><img src="https://te.legra.ph/file/4f6d327d17b64c4c2a20b.jpg" width="1000"></a></p>
+<p align="center"><img src="https://te.legra.ph/file/4f6d327d17b64c4c2a20b.jpg" width="500"></a></p>
 
 This Is Modified Repo Of Below Repo
 
@@ -23,7 +23,7 @@ Very Soon We will Update it With New Features.
 <details><summary><b>Deploy to Heroku</b></summary>
 <p>
 <br>
-<a href="https://heroku.com/deploy?template=https://github.com/KGN-BOTS/mdisk-search-bot">
+<a href="https://heroku.com/deploy?template=https://github.com/Maulikpatell/mdisk-search-bot">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
 </p>
