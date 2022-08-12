@@ -32,7 +32,7 @@ async def start_handler(_, event: Message):
         reply_markup=InlineKeyboardMarkup([
             [InlineKeyboardButton("Our Channel", url="https://t.me/DTG_TV"),
              InlineKeyboardButton("Our Movie Group", url="https://t.me/Movie_Search_bot_hindi")],
-	    [inlineKeyboardButton("Support Group", url="https://t.me/DTG_SUPPORT")],
+	    [InlineKeyboardButton("Support Group", url="https://t.me/DTG_SUPPORT")],
             [InlineKeyboardButton("Help", callback_data="Help_msg"),
              InlineKeyboardButton("About", callback_data="About_msg")]
         ])
@@ -47,7 +47,7 @@ async def help_handler(_, event: Message):
         reply_markup=InlineKeyboardMarkup([
             [InlineKeyboardButton("Our Channel", url="https://t.me/DTG_TV"),
              InlineKeyboardButton("Our Movie Group", url="https://t.me/Movie_Search_bot_hindi")],
-	    [inlineKeyboardButton("Support Group", url="https://t.me/DTG_SUPPORT"],	
+	    [InlineKeyboardButton("Support Group", url="https://t.me/DTG_SUPPORT"],	
              InlineKeyboardButton("About", callback_data="About_msg")]
         ])
     )
