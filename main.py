@@ -35,7 +35,7 @@ async def start_handler(_, event: Message):
 	    [InlineKeyboardButton("Support Group", url="https://t.me/DTG_SUPPORT")],
             [InlineKeyboardButton("Help", callback_data="Help_msg"),
              InlineKeyboardButton("About", callback_data="About_msg")]
-        ])
+            ])
     )
 
 @Bot.on_message(filters.private & filters.command("help"))
@@ -48,8 +48,8 @@ async def help_handler(_, event: Message):
             [InlineKeyboardButton("Our Channel", url="https://t.me/DTG_TV"),
              InlineKeyboardButton("Our Movie Group", url="https://t.me/Movie_Search_bot_hindi")],
 	    [InlineKeyboardButton("Support Group", url="https://t.me/DTG_SUPPORT")],	
-             InlineKeyboardButton("About", callback_data="About_msg")]
-        ])
+            [InlineKeyboardButton("About", callback_data="About_msg")]
+            ])
     )
 
 @Bot.on_message(filters.incoming)
