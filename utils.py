@@ -1,5 +1,5 @@
 import os
-Fromm configs.py import  BOT_USERNAME
+From configs.py import  BOT_USERNAME
 
 class temp(object):
     BANNED_USERS = []
