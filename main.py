@@ -75,9 +75,7 @@ async def inline_handlers(_, event: Message):
         await asyncio.sleep(10)
         await a.delete()
     except:
-        print(f"[{Config.BOT_SESSION_NAME}] - Failed to Answer - {event.from_user.first_name}")
-	print(e)
-	
+        print(f"[{Config.BOT_SESSION_NAME}] - Failed to Answer - {event.from_user.first_name}")	
 	     
 
 
