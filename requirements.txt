@@ -1,6 +1,6 @@
-https://github.com/pyrogram/pyrogram .zip
+git+https://github.com/subinps/pyrogram@inline-m
 TgCrypto
-motor
+motor=2.5.1
 aiofiles
 dnspython
 psutil
