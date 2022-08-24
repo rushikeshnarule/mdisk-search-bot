@@ -1,5 +1,5 @@
 # (c) @RoyalKrrishna
-
+import asyncio
 from configs import Config
 from pyrogram import Client, filters, idle
 from pyrogram.errors import QueryIdInvalid
@@ -70,13 +70,15 @@ async def inline_handlers(_, event: Message):
                 msg_text = message.text.html.split("|||", 1)[0]
             answers += f'**🎬 Title ➠ ' + '' + f_text.split("\n", 1)[0] + '' + '\n\n📜 About ➠ ' + '' + f_text.split("\n", 2)[-1] + ' \n\n**'
     try:
-        a=await event.reply_text(answers,catch_time=0)
+        a=await event.reply_text(answers) 
+        await asyncio.sleep(300)
+        await a.delete()
         print(f"[{Config.BOT_SESSION_NAME}] - Answered Successfully - {event.from_user.first_name}")
-        await asyncio.sleep(10)
-        await a.message.delete()
+    
     except:
         print(f"[{Config.BOT_SESSION_NAME}] - Failed to Answer - {event.from_user.first_name}")		
-        await a.message.delete()
+        await asyncio.sleep(300)
+        await a.delete()
 	     
 
 
