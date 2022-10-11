@@ -11,7 +11,7 @@ class Config(object):
     USER_SESSION_STRING = os.environ.get("USER_SESSION_STRING", "BQArEd_Iv08hsWIin_XisuI-d7ej0RJUHbpDI8ZVfiJSDUZZLKI_zMkNcplKjGf7ha1Jz837vKc6UW_-IGgE5YN7udquxxKEX6Wh4MrGlTDluh-Cpp3QsXHjipwMR5iK7yj_U72TLvF5uiAghzpjQUjMzCs_vfuHs_WqZS5ObEZJdIDNF484JUgKlkenwGuDRerddRhRIG0OjoCbqlVJFoahOS-UhW62kfdnCAIQhjQEcWfm0JMSjDSUVKW1mk7E_6ZOoWUSA1oGMXm-ontHJHr_s7nthfUwsNTBRczv1hnzA139V-Az2syPRc2jVUPlXGkzmCnyaXUBd50hZhNMz65TbqeyAQA")
     CHANNEL_ID = int(os.environ.get("CHANNEL_ID", -1001741439328))
     BOT_USERNAME = os.environ.get("BOT_USERNAME")
-    BOT_OWNER = int(os.environ.get("BOT_OWNER"))
+    BOT_OWNER = int(os.environ.get("BOT_OWNER",1856483841))
     UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", None)
     ABOUT_BOT_TEXT = """<b>This is Mdisk Search Bot.
 
